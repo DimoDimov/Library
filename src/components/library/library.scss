@@ -1,0 +1,9 @@
+.library{
+  &__books-container {
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}

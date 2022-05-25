@@ -1,0 +1,25 @@
+.book-edit {
+  
+  &__container {
+    text-align: left;
+   
+    border: 2px solid grey;
+    border-radius: 15px;
+    margin: 30px;
+    padding: 30px;
+  }
+
+  &__input-wrapper {
+    margin: 30px 30px 10px 30px;
+  }
+
+  &__input {
+    margin-left: 30px;
+  }
+
+  &__add-author-btn-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+}
