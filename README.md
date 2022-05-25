@@ -19,7 +19,7 @@ On the initial page we are having a create library button that will create a Pos
 
 afterwards a get request towards `/libraries/libraryId/books` will get the available books.
 
-A edit form will appear where the used will be able to add more books with one or more authors. Empty authors will be skipped. A book without author will not be published in the library.
+An edit form will appear where the user is able to add more books with one or more authors. Empty authors will be skipped. A book without author or title will not be published in the library.
 
 We are displaying bubbles with book details which are responsive thanks to the `flex` containers.
 
@@ -29,7 +29,7 @@ The concept of dumb and smart components is applied where the dumb components ar
 
 All the necessary data structures are applied. Dynamically generated forms and states help us build highly extensive components.
 
-The existing implementation is functional and fulfills the requirements and expectations as per the documentation above.
+The existing implementation is functional and fulfills the requirements and expectations as per documentation.
 
 # Getting Started with Create React App
 
