@@ -17,10 +17,7 @@ export const Library = () => {
   const getLatestBooks = (): void => {
     if (libraryId) {
       getBooks(libraryId)
-        .then(({ data }) => {
-          console.log(data);
-          setBooks(data)
-        })
+        .then(({ data }) => setBooks(data))
         .catch(() => setIsError(true))
     }
   }
@@ -31,7 +28,7 @@ export const Library = () => {
       authors,
       isbn: cryptoRandomString({ length: 16, type: 'base64' }),
     }, libraryId)
-      .then((res) => getLatestBooks())
+      .then(() => getLatestBooks())
       .catch((e) => {
         console.log(e);
         setIsError(true)
@@ -41,11 +38,7 @@ export const Library = () => {
 
   const onCreateLibraryHandler =
     () => createLibraryPost()
-      .then(({data}) =>
-      {
-        console.log(data.id);
-        setLibraryId(data.id)
-      })
+      .then(({data}) => setLibraryId(data.id))
       .catch((e) => {
         console.log(e);
         setIsError(true)

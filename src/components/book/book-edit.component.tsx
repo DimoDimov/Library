@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './book-edit.scss';
 
@@ -27,8 +27,10 @@ export const BookEdit = ({handleAddABook}: {handleAddABook: (title: string, auth
         }
       // skip empty authors
       }).filter(value => value !== '');
-    if(authors.length){
-      handleAddABook(bookTitle, authors)
+    if(authors.length && bookTitle.length){
+      handleAddABook(bookTitle, authors);
+      setBookTitle('');
+      setInputAuthorFields({ 'authorName1': '' });
     }
   }
 
@@ -57,11 +59,11 @@ export const BookEdit = ({handleAddABook}: {handleAddABook: (title: string, auth
                       className='book-edit__input'
                       name={key}
                       placeholder={`Author Name ${index + 1}`}
+                      value={inputAuthorFields[key]}
                       onChange={(e) => {
                         const updatedInputAuthorFields = { ...inputAuthorFields };
                         updatedInputAuthorFields[key] = e.target.value;
                         setInputAuthorFields(updatedInputAuthorFields)
-                        console.log('updated ---->', inputAuthorFields);
                         }
                       } />  
                 </label>

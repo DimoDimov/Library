@@ -13,5 +13,3 @@ export const axiosAPI = axios.create({
 });
 
 delete axiosAPI.defaults.headers.common['Authorization'];
-
-console.log('ko ', axiosAPI.defaults.headers);
