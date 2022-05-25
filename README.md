@@ -9,7 +9,7 @@ Additionally very briefly describe the thinking behind your approach and any dif
 
 # Overview
 
-A simple yet powerful domain based approach is used which suits ideally for mid to large projects. 
+An simple yet powerful domain based approach is used which suits ideally for mid to large projects. 
 
 In order to run the project locally without cors issues we installed a small library for development purposes - `cors-anywhere`.
 
